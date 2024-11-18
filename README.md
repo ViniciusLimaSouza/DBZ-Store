@@ -11,5 +11,4 @@ Página do Projeto
 Perfil do Kaue
 
 
-Perfil do Vinicius
-https://github.com/ViniciusLimaSouza/DBZ-Store
+Perfil do Vinicius: https://github.com/ViniciusLimaSouza/DBZ-Store](https://viniciuslimasouza.github.io/DBZ-Store/)
