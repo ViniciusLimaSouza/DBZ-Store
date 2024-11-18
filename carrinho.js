@@ -4,15 +4,15 @@ const buttonAccount = document.querySelector("#button-create-acount");
 const buttonCart = document.querySelector("#button-shopping-cart");
 
 function buttonLoginClicked() {
-  window.location.href = "../login.html";
+  window.location.href = "login.html";
 }
 
 function buttonCreatAccountClicked() {
-  window.location.href = "../cadastro.html";
+  window.location.href = "cadastro.html";
 }
 
 function buttonShoppingCart() {
-  window.location.href = "../carrinho.html";
+  window.location.href = "carrinho.html";
 }
 
 // Recupera os produtos comprados do Local Storage ou define um array vazio se não houver nada
