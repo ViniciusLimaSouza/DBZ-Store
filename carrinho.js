@@ -34,7 +34,7 @@ function exibirProdutosCarrinho() {
 
             // Corrige o caminho da imagem com '../' ao exibir
             const img = document.createElement("img");
-            img.src = `../${produto.imagemProduto}`;
+            img.src = `${produto.imagemProduto}`;
             img.alt = produto.nomeProduto;
             img.style.width = "100px";
             produtoDiv.appendChild(img);
