@@ -1,0 +1,270 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    background-color: #f7f7f7;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+a:hover {
+    color: #ffcc00; 
+}
+
+/* Cabeçalho */
+.site-header {
+    background-color: #ff6f00; /* Cor de fundo do cabeçalho */
+    padding: 15px 0; /* Espaçamento interno */
+    border-bottom: 2px solid #007bff; /* Borda inferior */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Sombra */
+}
+
+.site-header .container {
+    display: flex;
+    justify-content: space-between; /* Espaçamento entre os itens */
+    align-items: center; /* Alinhamento vertical */
+    max-width: 1200px; /* Largura máxima */
+    margin: 0 auto; /* Centralização */
+}
+
+.site-header h1 {
+    font-size: 2rem; /* Tamanho da fonte do título */
+    margin: 0; /* Remover margens */
+    color: #ffffff; /* Cor do texto */
+    text-shadow: 2px 2px #000000; /* Sombra do texto */
+}
+
+.nav {
+    list-style: none; /* Remover marcadores da lista */
+    padding: 0; /* Remover preenchimento */
+    margin: 0; /* Remover margens */
+}
+
+.nav-item {
+    margin-right: 20px; /* Espaçamento entre os itens do menu */
+}
+
+.nav-link {
+    color: #ffffff; /* Cor do texto dos links */
+    font-size: 1rem; /* Tamanho da fonte */
+    transition: color 0.3s; /* Transição suave para a cor */
+}
+
+
+/* Botões no Header */
+.button-group {
+    display: flex; /* Usar flexbox para os botões */
+    gap: 10px; /* Espaçamento entre os botões */
+}
+
+.btn {
+    border-radius: 6px; /* Bordas arredondadas */
+    padding: 10px 20px; /* Tamanho dos botões */
+    border: 1px solid #ffffff; /* Borda branca */
+    color: #ffffff; /* Cor do texto */
+    background-color: transparent; /* Fundo transparente */
+    transition: background-color 0.3s ease; /* Transição suave para o fundo */
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: rgba(255, 255, 255, 0.2); /* Fundo ao passar o mouse */
+}
+
+/* Alinhamento do Carrinho de Compras */
+#button-shopping-cart {
+    border: 1px solid #ffffff;
+    padding: 10px 20px;
+    color: #ffffff;
+    background-color: transparent;
+    border-radius: 6px;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+}
+
+#button-shopping-cart:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.nav-link:hover {
+    color: #ffcc00; /* Cor ao passar o mouse */
+}
+
+/* Botões */
+.button-group {
+    display: flex; /* Usar flexbox para os botões */
+}
+
+.btn {
+    border-radius: 6px; /* Bordas arredondadas */
+    transition: background-color 0.3s ease; /* Transição suave para o fundo */
+}
+
+.btn-outline-light {
+    border: 1px solid #ffffff; /* Borda dos botões */
+    color: #ffffff; /* Cor do texto */
+}
+
+.btn-outline-light:hover {
+    background-color: rgba(255, 255, 255, 0.2); /* Fundo ao passar o mouse */
+}
+
+/* Carrinho */
+#produtos {
+    margin-top: 20px;
+}
+
+.total {
+    font-size: 1.25rem;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+/* Formas de Pagamento */
+.payment-options {
+    text-align: center;
+    margin-top: 40px;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra leve para destaque */
+}
+
+.payment-options h2 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.payment-icons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.payment-icon {
+    font-size: 40px; /* Tamanho do ícone */
+    color: #333; /* Cor padrão */
+    transition: transform 0.3s ease, color 0.3s ease;
+    cursor: pointer;
+}
+
+.payment-icon:hover {
+    transform: scale(1.2); /* Efeito de zoom ao passar o mouse */
+    color: #ff6f00; /* Cor de destaque ao passar o mouse */
+}
+
+/* Rodapé */
+.site-footer {
+    background-color: #343a40;
+    color: #ffffff;
+    padding: 20px 0;
+    text-align: center;
+    border-top: 2px solid #007bff;
+    width: 100%;
+    bottom: 0;
+}
+
+.site-footer p {
+    margin: 0;
+    font-size: 0.9rem;
+    color: #ffcc00;
+}
+
+/* Cards de Produtos */
+.card-columns {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Exibe sempre 3 colunas em telas grandes */
+    grid-gap: 1.5rem; /* Espaçamento entre os cards */
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+.card {
+    background-color: #fff;
+    border: 2px solid #007bff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+    border-bottom: 2px solid #ff6f00;
+}
+
+.card-body {
+    padding: 15px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card-title {
+    font-size: 1.25rem;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.card-text {
+    font-size: 0.95rem;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.card .btn {
+    display: inline-block;
+    width: 100%;
+    font-size: 0.9rem;
+    padding: 10px;
+    text-align: center;
+    border-radius: 5px;
+    margin-top: auto;
+}
+
+/* Botões no Card */
+.card .btn-primary {
+    background-color: #007bff;
+    color: white;
+    border: none;
+}
+
+.card .btn-primary:hover {
+    background-color: #0056b3;
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 768px) {
+    .card-columns {
+        grid-template-columns: 1fr; /* Exibe 1 card por linha em telas pequenas */
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .card-columns {
+        grid-template-columns: repeat(2, 1fr); /* Exibe 2 cards por linha em telas médias */
+    }
+}

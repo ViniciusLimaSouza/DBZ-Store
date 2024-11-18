@@ -1,0 +1,52 @@
+.cart-section {
+    text-align: center;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+h2 {
+    text-align: center;
+    color: black;
+}
+
+.cart-section h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #ff6f00;
+}
+
+.payment-icons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.payment-icons i {
+    font-size: 2rem;
+    color: #007bff;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.payment-icons i:hover {
+    transform: scale(1.2);
+    color: #ffcc00;
+}
+
+.list-group {
+    max-width: 600px;
+    margin: 0 auto;
+    list-style: none;
+    padding: 0;
+}
+
+.list-group li {
+    padding: 15px;
+    border-bottom: 1px solid #ddd;
+}
+
+.list-group li:last-child {
+    border-bottom: none;
+}

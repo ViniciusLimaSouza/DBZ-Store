@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrinho de Compras</title>
+    <!-- Font Awesome para ícones -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <!-- CSS Global -->
+    <link rel="stylesheet" href="home.css">
+    <!-- CSS Específico do Carrinho (se necessário) -->
+    <link rel="stylesheet" href="carrinho.css">
+</head>
+<body>
+    <header class="site-header">
+        <div class="container">
+            <h1>Minha Loja</h1>
+            <nav>
+                <ul class="nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Produtos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="sobre_nos.html">Sobre</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contato</a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="button-group">
+                <button class="btn btn-outline-light mr-2" id="button-login" type="button" onclick="buttonLoginClicked()">Login</button>
+                <button class="btn btn-outline-light mr-2" id="button-create-acount" type="button" onclick="buttonCreatAccountClicked()">Criar Conta</button>
+                <button class="btn btn-outline-light" id="button-shopping-cart" type="button" onclick="buttonShoppingCart()">Carrinho</button>
+            </div>
+        </div>
+    </header>
+
+    <main class="container mt-4">
+        <!-- Carrinho de Compras -->
+        <section class="cart-section">
+            <h1 class="text-aura">Carrinho de Compras</h1>
+            <p class="total">Total: <span>R$ 0,00</span></p>
+            <ul id="produtos" class="list-group"></ul>
+            <button class="btn btn-warning mt-3" onclick="limparCarrinho()">Limpar Carrinho</button>
+        </section>
+
+        <!-- Formas de Pagamento -->
+        <section class="payment-options mt-4">
+            <h2>Formas de Pagamento</h2>
+            <div class="payment-icons">
+                <i class="fab fa-cc-visa payment-icon" title="Visa"></i>
+                <i class="fab fa-cc-mastercard payment-icon" title="MasterCard"></i>
+                <i class="fab fa-cc-amex payment-icon" title="American Express"></i>
+                <i class="fab fa-cc-elo payment-icon" title="Elo"></i>
+                <i class="fab fa-cc-hipercard payment-icon" title="Hipercard"></i>
+                <i class="fab fa-pix payment-icon" title="Pix"></i>
+            </div>
+        </section>
+    </main>
+
+    <!-- Rodapé -->
+    <footer class="site-footer">
+        <p>© 2024 Minha Loja. Todos os direitos reservados.</p>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="carrinho.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+            crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+            integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+            crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+            integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+            crossorigin="anonymous"></script>
+</body>
+</html>

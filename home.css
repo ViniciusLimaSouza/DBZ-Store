@@ -1,0 +1,347 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    background-color: #f7f7f7;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Links */
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+a:hover {
+    color: #ffcc00; 
+}
+
+/* Cabeçalho */
+.site-header {
+    background-color: #ff6f00; /* Cor de fundo do cabeçalho */
+    padding: 15px 0; /* Espaçamento interno */
+    border-bottom: 2px solid #007bff; /* Borda inferior */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Sombra */
+}
+
+.site-header .container {
+    display: flex;
+    justify-content: space-between; /* Espaçamento entre os itens */
+    align-items: center; /* Alinhamento vertical */
+    max-width: 1200px; /* Largura máxima */
+    margin: 0 auto; /* Centralização */
+}
+
+.site-header h1 {
+    font-size: 2rem; /* Tamanho da fonte do título */
+    margin: 0; /* Remover margens */
+    color: #ffffff; /* Cor do texto */
+    text-shadow: 2px 2px #000000; /* Sombra do texto */
+}
+
+.nav {
+    list-style: none; /* Remover marcadores da lista */
+    padding: 0; /* Remover preenchimento */
+    margin: 0; /* Remover margens */
+}
+
+.nav-item {
+    margin-right: 20px; /* Espaçamento entre os itens do menu */
+}
+
+.nav-link {
+    color: #ffffff; /* Cor do texto dos links */
+    font-size: 1rem; /* Tamanho da fonte */
+    transition: color 0.3s; /* Transição suave para a cor */
+}
+
+.nav-link:hover {
+    color: #ffcc00; /* Cor ao passar o mouse */
+}
+
+/* Botões */
+.button-group {
+    display: flex; /* Usar flexbox para os botões */
+}
+
+.btn {
+    border-radius: 6px; /* Bordas arredondadas */
+    transition: background-color 0.3s ease; /* Transição suave para o fundo */
+}
+
+.btn-outline-light {
+    border: 1px solid #ffffff; /* Borda dos botões */
+    color: #ffffff; /* Cor do texto */
+}
+
+.btn-outline-light:hover {
+    background-color: rgba(255, 255, 255, 0.2); /* Fundo ao passar o mouse */
+}
+
+/* Botão do Carrinho */
+.cart-container {
+    position: relative;
+}
+
+.cart-btn {
+    padding: 12px 24px;
+    font-size: 1.25rem;
+    display: flex;
+    align-items: center;
+    border-radius: 8px;
+    background-color: #ffc107; 
+    color: #000;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.cart-btn:hover {
+    background-color: #e0a800; 
+}
+
+.cart-btn i {
+    margin-right: 8px;
+}
+
+.cart-container .badge {
+    background-color: #ffcc00;
+    color: #000;
+    font-weight: bold;
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    padding: 4px 8px;
+    border-radius: 12px;
+    font-size: 0.75rem;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
+/* Login */
+.login-container {
+    max-width: 500px;
+    padding: 40px;
+    border: 2px solid #ff6f00; 
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    background-color: #fff;
+    text-align: center;
+    margin: 40px auto;
+}
+
+.login-container h2 {
+    margin-bottom: 20px;
+    font-size: 1.75rem;
+    color: #333;
+    text-shadow: 2px 2px #ff6f00;
+}
+
+.login-container label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 1rem;
+    color: #666;
+}
+
+.login-container input {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ff6f00;
+    border-radius: 6px;
+    font-size: 1rem;
+}
+
+.login-container button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 6px;
+    background-color: #007bff;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.login-container button:hover {
+    background-color: #0056b3;
+}
+
+.card-columns {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Exibe sempre 3 colunas em telas grandes */
+    grid-gap: 1.5rem; /* Espaçamento entre os cards */
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 0;
+    overflow: visible; /* Garante que todo o conteúdo seja exibido */
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 768px) {
+    .card-columns {
+        grid-template-columns: 1fr; /* Exibe 1 card por linha em telas pequenas */
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .card-columns {
+        grid-template-columns: repeat(2, 1fr); /* Exibe 2 cards por linha em telas médias */
+    }
+}
+
+/* Cards */
+.card {
+    background-color: #fff;
+    border: 2px solid #007bff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    height: 100%; /* Garante que o card ocupe toda a altura do grid */
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+    border-bottom: 2px solid #ff6f00;
+}
+
+.card-body {
+    padding: 15px;
+    flex-grow: 1; /* Expande o corpo do card para preencher o espaço */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Mantém o conteúdo alinhado dentro do card */
+}
+
+.card-title {
+    font-size: 1.25rem;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.card-text {
+    font-size: 0.95rem;
+    color: #666;
+    margin-bottom: 10px; /* Espaço entre o texto e o botão */
+}
+
+.card .btn {
+    display: inline-block;
+    width: 100%;
+    font-size: 0.9rem;
+    padding: 10px;
+    text-align: center;
+    border-radius: 5px;
+    margin-top: auto; /* Mantém o botão na parte inferior */
+}
+
+/* Botões no Card */
+.card .btn-primary {
+    background-color: #007bff;
+    color: white;
+    border: none;
+}
+
+.card .btn-primary:hover {
+    background-color: #0056b3;
+}
+
+/* Seção Sobre Nós */
+.about-section {
+    width: 100%;
+    padding: 20px;
+    background-color: #f8f9fa; 
+}
+
+.about-card {
+    border: none; 
+    border-radius: 15px; 
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); 
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; 
+    margin-bottom: 20px; 
+}
+
+.about-card:hover {
+    transform: scale(1.02); 
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3); 
+}
+
+.about-card .card-body {
+    padding: 20px;
+    background-color: #ffffff; 
+}
+
+.about-card .card-title {
+    font-size: 2rem; 
+    margin-bottom: 15px;
+    color: #333;
+    font-weight: bold; 
+}
+
+.about-card .card-text {
+    font-size: 1.2rem; 
+    color: #555; 
+    line-height: 1.6; 
+}
+
+.about-card img {
+    width: 100%;
+    height: auto;
+    max-height: 400px; 
+    object-fit: cover; 
+}
+
+/* Rodapé */
+.site-footer {
+    background-color: #343a40;
+    color: #ffffff;
+    padding: 20px 0;
+    text-align: center;
+    border-top: 2px solid #007bff; 
+    width: 100%;
+    bottom: 0;
+}
+
+.site-footer p {
+    margin: 0;
+    font-size: 0.9rem;
+    color: #ffcc00; 
+}
+/* Efeito Aura no Texto */
+.text-aura {
+    color: #fff;
+    text-shadow: 0 0 10px #00bfff, 0 0 20px #00bfff, 0 0 30px #00bfff;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .card-columns {
+        grid-template-columns: 1fr; /* Exibe 1 card por linha em telas pequenas */
+    }
+    .site-header .container, .login-container, .card-columns {
+        padding: 0 15px;
+    }
+    .cart-btn {
+        font-size: 1rem;
+    }
+    .about-card {
+        margin: 15px 0;
+    }
+}

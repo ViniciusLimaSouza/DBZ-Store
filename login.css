@@ -1,0 +1,102 @@
+/* Estilo geral da página */
+body {
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Roboto', sans-serif;
+    background-color: #f7f7f7; /* Fundo suave */
+}
+
+/* Container do formulário */
+div.d-flex {
+    max-width: 400px;
+    width: 100%;
+    background-color: #ffffff; /* Fundo branco */
+    border: 2px solid #007bff; /* Borda azul */
+    border-radius: 12px; /* Bordas arredondadas */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra */
+    overflow: hidden;
+}
+
+/* Título do formulário */
+.title-form {
+    background-color: #ff6f00; /* Fundo laranja */
+    text-align: center;
+    padding: 10px;
+    border-bottom: 2px solid #007bff; /* Borda azul abaixo do título */
+}
+
+.title-form p {
+    margin: 0;
+    font-size: 1.5rem;
+    color: #fff; /* Texto branco */
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+/* Formulário */
+form {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Espaçamento entre os campos */
+}
+
+label {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #333; /* Texto escuro */
+    margin-bottom: 5px;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #007bff; /* Azul igual aos cards */
+    border-radius: 8px; /* Bordas arredondadas */
+    font-size: 1rem;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+input:focus {
+    border-color: #0056b3; /* Azul mais escuro no foco */
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Efeito de sombra azul no foco */
+    outline: none;
+}
+
+/* Botão de criar conta */
+button {
+    background-color: #007bff; /* Azul igual aos botões da loja */
+    color: #fff; /* Texto branco */
+    font-size: 1rem;
+    padding: 10px 0; /* Altura proporcional ao texto */
+    border: none;
+    border-radius: 6px; /* Bordas arredondadas */
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    font-weight: bold;
+    text-transform: uppercase;
+    border: 2px solid #007bff; /* Borda azul igual aos botões da loja */
+}
+
+button:hover {
+    background-color: #0056b3; /* Azul mais escuro no hover */
+    border-color: #0056b3; /* Borda acompanha a cor do fundo */
+    transform: scale(1.05); /* Efeito de zoom no hover */
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    div.d-flex {
+        max-width: 90%;
+    }
+    .title-form p {
+        font-size: 1.2rem;
+    }
+    button {
+        font-size: 0.9rem;
+    }
+}

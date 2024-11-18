@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minha Loja</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="home.css">
+</head>
+
+<body>
+  <header class="site-header">
+        <div class="container">
+            <h1>Minha Loja</h1>
+            <nav>
+                <ul class="nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Produtos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="sobre_nos.html">Sobre</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contato</a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="button-group">
+                <button class="btn btn-outline-light mr-2" id="button-login" type="button" onclick="buttonLoginClicked()">Login</button>
+                <button class="btn btn-outline-light mr-2" id="button-create-acount" type="button" onclick="buttonCreatAccountClicked()">Criar Conta</button>
+                <button class="btn btn-outline-light" id="button-shopping-cart" type="button" onclick="buttonShoppingCart()">Carrinho</button>
+            </div>
+        </div>
+    </header>
+
+  <!-- Cards de Produtos -->
+<div class="card-columns mt-4 container">
+    <!-- Card 1 -->
+    <div class="card">
+        <img class="card-img-top" src="img/Bulma.jpeg" alt="Imagem de Bulma">
+        <div class="card-body">
+            <h5 class="card-title">Dragon Ball - Action Figure Bulma (Clássica)</h5>
+            <p class="card-text">R$217.00</p>
+            <button class="btn btn-primary" onclick="comprar('Bulma.jpeg', 'Action Figure Bulma (Clássica)', 217.00)">Adicionar ao Carrinho</button>
+        </div>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="card">
+        <img class="card-img-top" src="img/Cell.jpeg" alt="Imagem de Cell">
+        <div class="card-body">
+            <h5 class="card-title">Dragon Ball Z - Action Figure Cell (Perfeito)</h5>
+            <p class="card-text">R$300.00</p>
+            <button class="btn btn-primary" onclick="comprar('Cell.jpeg', 'Action Figure Cell (Perfeito)', 300.00)">Adicionar ao Carrinho</button>
+        </div>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="card">
+        <img class="card-img-top" src="img/Freeza.jpeg" alt="Imagem de Freeza">
+        <div class="card-body">
+            <h5 class="card-title">Dragon Ball Z - Action Figure Freeza (Final)</h5>
+            <p class="card-text">R$299.99</p>
+            <button class="btn btn-primary" onclick="comprar('Freeza.jpeg', 'Action Figure Freeza (Final)', 299.99)">Adicionar ao Carrinho</button>
+        </div>
+    </div>
+
+    <!-- Card 4 -->
+    <div class="card">
+        <img class="card-img-top" src="img/Goku.jpeg" alt="Imagem de Goku">
+        <div class="card-body">
+            <h5 class="card-title">Dragon Ball Z - Action Figure Goku</h5>
+            <p class="card-text">R$380.00</p>
+            <button class="btn btn-primary" onclick="comprar('Goku.jpeg', 'Action Figure Goku', 380.00)">Adicionar ao Carrinho</button>
+        </div>
+    </div>
+
+    <!-- Card 5 -->
+    <div class="card">
+        <img class="card-img-top" src="img/MajinBoo.jpeg" alt="Imagem de Majin Boo">
+        <div class="card-body">
+            <h5 class="card-title">Dragon Ball Z - Action Figure Majin Boo (Kid)</h5>
+            <p class="card-text">R$332.00</p>
+            <button class="btn btn-primary" onclick="comprar('MajinBoo.jpeg', 'Action Figure Majin Boo (Kid)', 332.00)">Adicionar ao Carrinho</button>
+        </div>
+    </div>
+
+    <!-- Card 6 -->
+    <div class="card">
+        <img class="card-img-top" src="img/Nappa.jpeg" alt="Imagem de Nappa">
+        <div class="card-body">
+            <h5 class="card-title">Dragon Ball Z - Action Figure Nappa</h5>
+            <p class="card-text">R$230.00</p>
+            <button class="btn btn-primary" onclick="comprar('Nappa.jpeg', 'Action Figure Nappa', 230.00)">Adicionar ao Carrinho</button>
+        </div>
+    </div>
+
+    <!-- Card 7 -->
+    <div class="card">
+        <img class="card-img-top" src="img/MestreKami.jpeg" alt="Imagem de Mestre Kami">
+        <div class="card-body">
+            <h5 class="card-title">Dragon Ball - Action Figure Mestre Kami</h5>
+            <p class="card-text">R$250.00</p>
+            <button class="btn btn-primary" onclick="comprar('MestreKami.jpeg', 'Action Figure Mestre Kami', 250.00)">Adicionar ao Carrinho</button>
+        </div>
+    </div>
+
+    <!-- Card 8 -->
+    <div class="card">
+        <img class="card-img-top" src="img/Vegeta.jpeg" alt="Imagem de Vegeta">
+        <div class="card-body">
+            <h5 class="card-title">Dragon Ball Z - Action Figure Vegeta (SSJ)</h5>
+            <p class="card-text">R$340.00</p>
+            <button class="btn btn-primary" onclick="comprar('Vegeta.jpeg', 'Action Figure Vegeta (SSJ)', 340.00)">Adicionar ao Carrinho</button>
+        </div>
+    </div>
+
+    <!-- Card 9 -->
+    <div class="card">
+        <img class="card-img-top" src="img/Kuririn.jpeg" alt="Imagem de Kuririn">
+        <div class="card-body">
+            <h5 class="card-title">Dragon Ball Z - Action Figure Kuririn</h5>
+            <p class="card-text">R$250.00</p>
+            <button class="btn btn-primary" onclick="comprar('Kuririn.jpeg', 'Action Figure Kuririn', 250.00)">Adicionar ao Carrinho</button>
+        </div>
+    </div>
+</div>
+
+    <!-- Rodapé -->
+    <footer class="site-footer">
+        <p>© 2024 Minha Loja. Todos os direitos reservados.</p>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="home.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+</body>
+
+</html>
