@@ -9,7 +9,7 @@ function login() {
   for (let i = 0; i < users.length; i++) {
     if (users[i].email == email && users[i].password == senha) {
       alert(`${users[i].name}, logou`);
-      window.location.href = '../index.html'
+      window.location.href = 'index.html'
     }
   }
 }
