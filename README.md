@@ -1,3 +1,14 @@
 # DBZ-Store
 
-Projeto de PWI feito por Kaue Vasconcelos Bucciotti e Vinícius de Lima Souza
+Descrição
+Atividade da Disciplina de Desenvolvimento Web.
+
+Autores: Kaue Vasconcelos Bucciotti e Vinicius de Lima Souza
+
+Links
+Página do Projeto
+
+Perfil do Kaue
+
+
+Perfil do Vinicius: https://github.com/ViniciusLimaSouza/DBZ-Store](https://viniciuslimasouza.github.io/DBZ-Store/)
